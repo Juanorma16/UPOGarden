@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_alquiler_form">
+			<field name="name">Alquileres</field>
+			<field name="model">upogarden.alquiler</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de alquileres">
+					<group string="Alquileres">
+						<field name="id_alquiler" /><!--- AL CREAR SE VE ESTO -->
+						<field name="fecha_Inicio" />
+						<field name="fecha_Fin" />
+						<field name="tiempo_Total" />
+						<field name="productos_ids" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_alquiler_tree">
+			<field name="name">Alquileres</field>
+			<field name="model">upogarden.alquiler</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de alquileres">
+					<field name="id_alquiler" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="fecha_Inicio" />
+					<field name="fecha_Fin" />
+					<field name="tiempo_Total" />
+					<field name="productos_ids"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_alquiler_view">
+			<field name="name">alquiler Calendar</field>
+			<field name="model">upogarden.alquiler</field>
+			<field name="type">calendar</field>
+			<field name="arch" type="xml">
+				<calendar string="Calendar View"
+					date_start="fecha_Inicio"
+					date_stop="fecha_Fin"
+					color="id_alquiler">
+					<field name="id_alquiler" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="act_alquiler" model="ir.actions.act_window">
+			<field name="name">Alquileres</field>
+			<field name="res_model">upogarden.alquiler</field>
+			<field name="view_mode">tree,form,calendar</field>
+		</record>
+		<menuitem name="Alquileres" id="alquiler_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Alquileres" id="alquiler_submenu_2"
+			parent="alquiler_submenu" sequence="100" action="act_alquiler" />
+
+	</data>
+</odoo>

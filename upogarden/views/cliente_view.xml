@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_cliente_form">
+			<field name="name">Clientes</field>
+			<field name="model">upogarden.cliente</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de clientes">
+					<group string="Clientes">
+						<field name="id_cliente" /><!--- AL CREAR SE VE ESTO -->
+						<field name="nombre" />
+						<field name="apellidos" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_cliente_tree">
+			<field name="name">Clientes</field>
+			<field name="model">upogarden.cliente</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de clientes">
+					<field name="id_cliente" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="nombre" />
+					<field name="apellidos" />
+				</tree>
+			</field>
+		</record>
+
+
+
+		<record id="act_cliente" model="ir.actions.act_window">
+			<field name="name">Clientes</field>
+			<field name="res_model">upogarden.cliente</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem id="upogarden" name="UPOGARDEN"
+			action="act_cliente" />
+		<menuitem name="Clientes" id="cliente_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Clientes" id="cliente_submenu_2"
+			parent="cliente_submenu" sequence="100" action="act_cliente" />
+
+	</data>
+</odoo>
