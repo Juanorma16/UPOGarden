@@ -10,6 +10,8 @@
 						<field name="id_cliente" /><!--- AL CREAR SE VE ESTO -->
 						<field name="nombre" />
 						<field name="apellidos" />
+						<field name="alquileres_ids" />
+						<field name="contrataciones_ids" />
 					</group>
 				</form>
 			</field>
@@ -23,6 +25,8 @@
 					<field name="id_cliente" /><!--- EN LA LISTA SE VE ESTO -->
 					<field name="nombre" />
 					<field name="apellidos" />
+					<field name="alquileres_ids" />
+					<field name="contrataciones_ids" />
 				</tree>
 			</field>
 		</record>

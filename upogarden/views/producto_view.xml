@@ -7,11 +7,19 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de productos">
 					<group string="Productos">
-						<field name="id_producto" /><!--- AL CREAR SE VE ESTO -->
-						<field name="nombre" />
-						<field name="descripcion" />
-						<field name="precio_Hora" />
-						<field name="alquiler_id" />
+						<group>
+							<field name="id_producto" /><!--- AL CREAR SE VE ESTO -->
+							<field name="nombre" />
+							<field name="descripcion" />
+							<field name="precio_Hora" />
+						</group>
+						<group>
+							<field name="foto" nolabel="1" widget="image"
+								class="oe_avatar" />
+						</group>
+						<group colspan="4">
+							<field name="alquiler_ids" />
+						</group>
 					</group>
 				</form>
 			</field>
@@ -26,7 +34,7 @@
 					<field name="nombre" />
 					<field name="descripcion" />
 					<field name="precio_Hora" />
-					<field name="alquiler_id" />
+					<field name="alquiler_ids" />
 				</tree>
 			</field>
 		</record>
@@ -36,9 +44,30 @@
 			<field name="model">upogarden.producto</field>
 			<field name="arch" type="xml">
 				<graph string="Precio por hora" type="bar">
-					<field name="nombre" type="row"/>
-					<field name="precio_Hora" type="measure"/>
+					<field name="nombre" type="row" />
+					<field name="precio_Hora" type="measure" />
 				</graph>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_upogarden_producto_search">
+			<field name="name">view_upogarden_producto_search</field>
+			<field name="model">upogarden.producto</field>
+			<field name="arch" type="xml">
+				<search string="Productos">
+					<filter string="Precio > 30"
+						domain="[('precio_Hora','>',30)]" />
+					<separator orientation="vertical" />
+					<field name="descripcion" />
+					<field name="nombre" />
+					<field name="alquiler_ids" />
+					<group expand="0" string="Agrupar por…">
+						<filter name="group_by_nombre" string="Nombre"
+							context="{'group_by':'nombre'}" />
+						<filter name="group_by_precio_Hora" string="Precio"
+							context="{'group_by':'precio_Hora'}" />
+					</group>
+				</search>
 			</field>
 		</record>
 
@@ -46,6 +75,8 @@
 			<field name="name">Productos</field>
 			<field name="res_model">upogarden.producto</field>
 			<field name="view_mode">tree,form,graph</field>
+			<field name="search_view_id"
+				ref="view_upogarden_producto_search" />
 		</record>
 		<menuitem name="Productos" id="producto_submenu"
 			parent="upogarden" sequence="100" />

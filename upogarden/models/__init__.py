@@ -3,3 +3,5 @@
 from . import cliente
 from . import producto
 from . import alquiler
+from . import contratacion
+from . import servicio
