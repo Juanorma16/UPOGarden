@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_servicio_form">
+			<field name="name">Servicios</field>
+			<field name="model">upogarden.servicio</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de servicios">
+					<group string="Servicios">
+						<field name="id_servicio" /><!--- AL CREAR SE VE ESTO -->
+						<field name="nombre" />
+						<field name="descripcion" />
+						<field name="precio_Hora" />
+						<field name="contrataciones_ids" />
+
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_servicio_tree">
+			<field name="name">Servicios</field>
+			<field name="model">upogarden.servicio</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de servicios">
+					<field name="id_servicio" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="nombre" />
+					<field name="descripcion" />
+					<field name="precio_Hora" />
+					<field name="contrataciones_ids" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_servicio_graph">
+			<field name="name">Servicios</field>
+			<field name="model">upogarden.servicio</field>
+			<field name="arch" type="xml">
+				<graph string="Precio por hora" type="bar">
+					<field name="nombre" type="row" />
+					<field name="precio_Hora" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_upogarden_servicio_search">
+			<field name="name">view_upogarden_servicio_search</field>
+			<field name="model">upogarden.servicio</field>
+			<field name="arch" type="xml">
+				<search string="Servicios">
+					<filter string="Precio > 30"
+						domain="[('precio_Hora','>',30)]" />
+					<separator orientation="vertical" />
+					<field name="descripcion" />
+					<field name="nombre" />
+					<field name="contrataciones_ids" />
+					<group expand="0" string="Agrupar por…">
+						<filter name="group_by_nombre" string="Nombre"
+							context="{'group_by':'nombre'}" />
+						<filter name="group_by_precio_Hora" string="Precio"
+							context="{'group_by':'precio_Hora'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="act_servicio" model="ir.actions.act_window">
+			<field name="name">Servicios</field>
+			<field name="res_model">upogarden.servicio</field>
+			<field name="view_mode">tree,form,graph</field>
+			<field name="search_view_id"
+				ref="view_upogarden_servicio_search" />
+		</record>
+		<menuitem name="Servicios" id="servicio_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Servicios" id="servicio_submenu_2"
+			parent="servicio_submenu" sequence="100" action="act_servicio" />
+
+	</data>
+</odoo>

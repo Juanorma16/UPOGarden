@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_contratacion_form">
+			<field name="name">Contrataciones</field>
+			<field name="model">upogarden.contratacion</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de contrataciones">
+					<group string="Contrataciones">
+						<field name="id_contratacion" /><!--- AL CREAR SE VE ESTO -->
+						<field name="fecha_Inicio" />
+						<field name="fecha_Fin" />
+						<field name="tiempo_Total" />
+						<field name="lugar" />
+						<field name="servicios_ids" />
+						<field name="cliente_id"/>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_contratacion_tree">
+			<field name="name">Contrataciones</field>
+			<field name="model">upogarden.contratacion</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de contrataciones">
+					<field name="id_contratacion" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="fecha_Inicio" />
+					<field name="fecha_Fin" />
+					<field name="tiempo_Total" />
+					<field name="lugar" />
+					<field name="servicios_ids" />
+					<field name="cliente_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_contratacion_view">
+			<field name="name">contratacion Calendar</field>
+			<field name="model">upogarden.contratacion</field>
+			<field name="type">calendar</field>
+			<field name="arch" type="xml">
+				<calendar string="Contrataciones" date_start="fecha_Inicio"
+					date_stop="fecha_Fin" color="id_contratacion">
+					<field name="id_contratacion" />
+				</calendar>
+			</field>
+		</record>
+<!--- METER POR LUGAR -->
+		<record id="act_contratacion" model="ir.actions.act_window">
+			<field name="name">Contrataciones</field>
+			<field name="res_model">upogarden.contratacion</field>
+			<field name="view_mode">tree,form,calendar</field>
+		</record>
+		<menuitem name="Contrataciones" id="contratacion_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Contrataciones" id="contratacion_submenu_2"
+			parent="contratacion_submenu" sequence="100" action="act_contratacion" />
+
+	</data>
+</odoo>
