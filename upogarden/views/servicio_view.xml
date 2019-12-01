@@ -11,6 +11,7 @@
 						<field name="nombre" />
 						<field name="descripcion" />
 						<field name="precio_Hora" />
+						<field name="productos_ids" />
 						<field name="contrataciones_ids" />
 
 					</group>
@@ -27,6 +28,7 @@
 					<field name="nombre" />
 					<field name="descripcion" />
 					<field name="precio_Hora" />
+					<field name="productos_ids" />
 					<field name="contrataciones_ids" />
 				</tree>
 			</field>
@@ -54,6 +56,7 @@
 					<field name="descripcion" />
 					<field name="nombre" />
 					<field name="contrataciones_ids" />
+					<field name="productos_ids" />
 					<group expand="0" string="Agrupar por…">
 						<filter name="group_by_nombre" string="Nombre"
 							context="{'group_by':'nombre'}" />

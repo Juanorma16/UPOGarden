@@ -7,7 +7,7 @@
     'category': 'Servicios',
     'version': '0.1',
     'depends': ['base'],
-    'data': ['views/cliente_view.xml','views/producto_view.xml','views/alquiler_view.xml','views/contratacion_view.xml','views/servicio_view.xml'],
+    'data': ['views/cliente_view.xml','views/producto_view.xml','views/alquiler_view.xml','views/contratacion_view.xml','views/servicio_view.xml','views/proveedor_view.xml','views/entrega_view.xml'],
     'demo': [ ],
     'application': True,
 }

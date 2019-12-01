@@ -10,9 +10,9 @@
 						<field name="id_alquiler" /><!--- AL CREAR SE VE ESTO -->
 						<field name="fecha_Inicio" />
 						<field name="fecha_Fin" />
-						<field name="tiempo_Total" />
 						<field name="productos_ids" />
 						<field name="cliente_id"/>
+						<field name="entrega_id" />
 					</group>
 				</form>
 			</field>
@@ -26,9 +26,9 @@
 					<field name="id_alquiler" /><!--- EN LA LISTA SE VE ESTO -->
 					<field name="fecha_Inicio" />
 					<field name="fecha_Fin" />
-					<field name="tiempo_Total" />
 					<field name="productos_ids"/>
 					<field name="cliente_id"/>
+					<field name="entrega_id" />
 				</tree>
 			</field>
 		</record>

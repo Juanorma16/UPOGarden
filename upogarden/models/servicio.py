@@ -11,4 +11,5 @@ class servicio(models.Model):
     nombre = fields.Char('Nombre', size=64, required=True)
     descripcion = fields.Char('Descripcion', size=64, required=True)
     precio_Hora = fields.Float('Precio por hora',required=True)
+    productos_ids = fields.Many2many('upogarden.producto',string="Productos Necesarios")
     contrataciones_ids = fields.Many2many('upogarden.contratacion',string="Contrataciones")

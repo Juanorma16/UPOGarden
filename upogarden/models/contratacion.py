@@ -10,7 +10,6 @@ class contratacion(models.Model):
     id_contratacion = fields.Char('ID', size=64, required=True)
     fecha_Inicio = fields.Datetime('Desde',required=True,autodate = True)
     fecha_Fin = fields.Datetime('Hasta',required=True, autodate = True)
-    tiempo_Total = fields.Float('Tiempo total',required=True)
     lugar = fields.Char('Lugar', size=64, required=True)
     servicios_ids = fields.Many2many('upogarden.servicio',string="Servicios")
     cliente_id = fields.Many2one("upogarden.cliente","Cliente")

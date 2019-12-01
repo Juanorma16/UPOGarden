@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_entrega_form">
+			<field name="name">Entregas</field>
+			<field name="model">upogarden.entrega</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de entregas">
+					<group string="Entregas">
+						<field name="id_entrega" /><!--- AL CREAR SE VE ESTO -->
+						<field name="lugar_Entrega" />
+						<field name="fecha_Entrega" />
+						<field name="alquiler_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_entrega_tree">
+			<field name="name">Entregas</field>
+			<field name="model">upogarden.entrega</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de entregas">
+					<field name="id_entrega" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="lugar_Entrega" />
+					<field name="fecha_Entrega" />
+					<field name="alquiler_id" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="upogarden_entrega_view">
+			<field name="name">entrega Calendar</field>
+			<field name="model">upogarden.entrega</field>
+			<field name="type">calendar</field>
+			<field name="arch" type="xml">
+				<calendar string="Entregas"
+					date_start="fecha_Entrega"
+					color="id_entrega">
+					<field name="lugar_Entrega" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="act_entrega" model="ir.actions.act_window">
+			<field name="name">Entregas</field>
+			<field name="res_model">upogarden.entrega</field>
+			<field name="view_mode">tree,form,calendar</field>
+		</record>
+		<menuitem name="Entregas" id="entrega_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Entregas" id="entrega_submenu_2"
+			parent="entrega_submenu" sequence="100" action="act_entrega" />
+
+	</data>
+</odoo>

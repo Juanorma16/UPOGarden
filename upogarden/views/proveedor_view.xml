@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_proveedor_form">
+			<field name="name">Proveedores</field>
+			<field name="model">upogarden.proveedor</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de proveedores">
+					<group string="Proveedores">
+						<field name="id_proveedor" /><!--- AL CREAR SE VE ESTO -->
+						<field name="nombre" />
+						<field name="localizacion" />
+						<field name="productos_ids" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_proveedor_tree">
+			<field name="name">Proveedores</field>
+			<field name="model">upogarden.proveedor</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de proveedores">
+					<field name="id_proveedor" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="nombre" />
+					<field name="localizacion" />
+					<field name="productos_ids" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_proveedor" model="ir.actions.act_window">
+			<field name="name">Proveedores</field>
+			<field name="res_model">upogarden.proveedor</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem name="Proveedores" id="proveedor_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Proveedores" id="proveedor_submenu_2"
+			parent="proveedor_submenu" sequence="100" action="act_proveedor" />
+
+	</data>
+</odoo>

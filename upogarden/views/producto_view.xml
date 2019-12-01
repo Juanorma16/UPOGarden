@@ -12,6 +12,7 @@
 							<field name="nombre" />
 							<field name="descripcion" />
 							<field name="precio_Hora" />
+							<field name="proveedor_id" />
 						</group>
 						<group>
 							<field name="foto" nolabel="1" widget="image"
@@ -35,6 +36,7 @@
 					<field name="descripcion" />
 					<field name="precio_Hora" />
 					<field name="alquiler_ids" />
+					<field name="proveedor_id" />
 				</tree>
 			</field>
 		</record>
@@ -61,6 +63,7 @@
 					<field name="descripcion" />
 					<field name="nombre" />
 					<field name="alquiler_ids" />
+					<field name="proveedor_id" />
 					<group expand="0" string="Agrupar por…">
 						<filter name="group_by_nombre" string="Nombre"
 							context="{'group_by':'nombre'}" />

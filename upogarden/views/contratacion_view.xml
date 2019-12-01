@@ -10,7 +10,6 @@
 						<field name="id_contratacion" /><!--- AL CREAR SE VE ESTO -->
 						<field name="fecha_Inicio" />
 						<field name="fecha_Fin" />
-						<field name="tiempo_Total" />
 						<field name="lugar" />
 						<field name="servicios_ids" />
 						<field name="cliente_id"/>
@@ -27,7 +26,6 @@
 					<field name="id_contratacion" /><!--- EN LA LISTA SE VE ESTO -->
 					<field name="fecha_Inicio" />
 					<field name="fecha_Fin" />
-					<field name="tiempo_Total" />
 					<field name="lugar" />
 					<field name="servicios_ids" />
 					<field name="cliente_id"/>

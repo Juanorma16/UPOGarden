@@ -13,4 +13,5 @@ class producto(models.Model):
     descripcion = fields.Char('Descripcion', size=64, required=True)
     precio_Hora = fields.Float('Precio por hora',required=True)
     alquiler_ids = fields.Many2many('upogarden.alquiler',string="Alquileres")
+    proveedor_id = fields.Many2one("upogarden.proveedor","Proveedor")
     
