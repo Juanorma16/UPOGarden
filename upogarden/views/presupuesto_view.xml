@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_presupuesto_form">
+			<field name="name">Presupuestos</field>
+			<field name="model">upogarden.presupuesto</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de presupuestos">
+					<group string="Presupuestos">
+						<field name="id_presupuesto" /><!--- AL CREAR SE VE ESTO -->
+						<field name="coste_Total" />
+						<field name="descripcion" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_presupuesto_tree">
+			<field name="name">Presupuestos</field>
+			<field name="model">upogarden.presupuesto</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de presupuestos">
+					<field name="id_presupuesto" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="coste_Total" />
+					<field name="descripcion" />
+				</tree>
+			</field>
+		</record>
+
+<!--- METER POR LUGAR -->
+		<record id="act_presupuesto" model="ir.actions.act_window">
+			<field name="name">Presupuestos</field>
+			<field name="res_model">upogarden.presupuesto</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem name="Presupuestos" id="presupuesto_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Presupuestos" id="presupuesto_submenu_2"
+			parent="presupuesto_submenu" sequence="100" action="act_presupuesto" />
+
+	</data>
+</odoo>

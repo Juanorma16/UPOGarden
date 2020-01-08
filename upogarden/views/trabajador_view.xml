@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upogarden_jardinero_form">
+			<field name="name">Jardineros</field>
+			<field name="model">upogarden.jardinero</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de Jardineros">
+					<group string="Jardineros">
+						<group colspan="4">
+							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
+							<field name="nombre" />
+							<field name="sueldo" />
+							<field name="turno" />
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_jardinero_tree">
+			<field name="name">Jardineros</field>
+			<field name="model">upogarden.jardinero</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de Jardineros">
+					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="nombre" />
+					<field name="sueldo" />
+					<field name="turno" />
+				</tree>
+			</field>
+		</record>
+
+
+
+	<record model="ir.ui.view" id="upogarden_trabajadorAjeno_form">
+			<field name="name">Trabajadores</field>
+			<field name="model">upogarden.trabajadorAjeno</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de Trabajadores">
+					<group string="Trabajadores Ajenos">
+						<group colspan="4">
+							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
+							<field name="nombre" />
+							<field name="sueldo" />
+							<field name="telefono" />
+							<field name="disponibilidad" />
+							<field name="empresa" />
+							<field name="experiencia" />
+							<field name="especialidad" />
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upogarden_trabajadorAjeno_tree">
+			<field name="name">Trabajadores Ajenos</field>
+			<field name="model">upogarden.trabajadorAjeno</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de Trabajadores Ajenos">
+					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="nombre" />
+					<field name="sueldo" />
+					<field name="telefono" />
+					<field name="disponibilidad" />
+					<field name="empresa" />
+					<field name="experiencia" />
+					<field name="especialidad" />
+				</tree>
+			</field>
+		</record>
+		
+
+		<record id="act_jardinero" model="ir.actions.act_window">
+			<field name="name">Jardineros</field>
+			<field name="res_model">upogarden.jardinero</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record id="act_trabajadorAjeno" model="ir.actions.act_window">
+			<field name="name">Trabajadores Ajenos</field>
+			<field name="res_model">upogarden.trabajadorAjeno</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="upogarden" name="UPOGARDEN"
+			action="act_trabajador" />
+		<menuitem name="Trabajadores" id="trabajador_submenu"
+			parent="upogarden" sequence="100" />
+		<menuitem name="Ver Jardineros" id="trabajador_submenu_2"
+			parent="trabajador_submenu" sequence="100" action="act_jardinero" />
+		<menuitem name="Ver Trabajadores Ajenos" id="trabajador_submenu_3"
+			parent="trabajador_submenu" sequence="100" action="act_trabajadorAjeno" />
+
+	</data>
+</odoo>
