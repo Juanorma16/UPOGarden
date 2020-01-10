@@ -6,6 +6,13 @@
 			<field name="model">upogarden.contratacion</field>
 			<field name="arch" type="xml">
 				<form string="Formulario de contrataciones">
+					<header>
+						<button name="btn_submit_to_enproceso" string="Iniciar"
+							type="object" class="oe_highlight" states="creada" />
+						<button name="btn_submit_to_finalizado" string="Finalizar"
+							type="object" class="oe_highlight" states="enproceso" />
+							<field name='state' widget='statusbar' />
+					</header>
 					<group string="Contrataciones">
 						<field name="id_contratacion" /><!--- AL CREAR SE VE ESTO -->
 						<field name="fecha_Inicio" />
@@ -29,6 +36,7 @@
 					<field name="lugar" />
 					<field name="servicios_ids" />
 					<field name="cliente_id"/>
+					<field name="state"/>
 				</tree>
 			</field>
 		</record>
@@ -44,6 +52,7 @@
 				</calendar>
 			</field>
 		</record>
+		
 <!--- METER POR LUGAR -->
 		<record id="act_contratacion" model="ir.actions.act_window">
 			<field name="name">Contrataciones</field>

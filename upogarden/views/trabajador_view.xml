@@ -11,7 +11,8 @@
 							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
 							<field name="nombre" />
 							<field name="sueldo" />
-							<field name="turno" />
+							<field name="tipo" />
+							<field name="turno" /> 
 						</group>
 					</group>
 				</form>
@@ -26,7 +27,8 @@
 					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
 					<field name="nombre" />
 					<field name="sueldo" />
-					<field name="turno" />
+					<field name="tipo" />
+					<field name="turno" /> 
 				</tree>
 			</field>
 		</record>
@@ -35,7 +37,7 @@
 
 	<record model="ir.ui.view" id="upogarden_trabajadorAjeno_form">
 			<field name="name">Trabajadores</field>
-			<field name="model">upogarden.trabajadorAjeno</field>
+			<field name="model">upogarden.trabajadorajeno</field>
 			<field name="arch" type="xml">
 				<form string="Formulario de Trabajadores">
 					<group string="Trabajadores Ajenos">
@@ -43,6 +45,7 @@
 							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
 							<field name="nombre" />
 							<field name="sueldo" />
+							<field name="tipo" />
 							<field name="telefono" />
 							<field name="disponibilidad" />
 							<field name="empresa" />
@@ -56,12 +59,13 @@
 
 		<record model="ir.ui.view" id="upogarden_trabajadorAjeno_tree">
 			<field name="name">Trabajadores Ajenos</field>
-			<field name="model">upogarden.trabajadorAjeno</field>
+			<field name="model">upogarden.trabajadorajeno</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de Trabajadores Ajenos">
 					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
 					<field name="nombre" />
 					<field name="sueldo" />
+					<field name="tipo" />
 					<field name="telefono" />
 					<field name="disponibilidad" />
 					<field name="empresa" />
@@ -70,7 +74,6 @@
 				</tree>
 			</field>
 		</record>
-		
 
 		<record id="act_jardinero" model="ir.actions.act_window">
 			<field name="name">Jardineros</field>
@@ -80,12 +83,11 @@
 		
 		<record id="act_trabajadorAjeno" model="ir.actions.act_window">
 			<field name="name">Trabajadores Ajenos</field>
-			<field name="res_model">upogarden.trabajadorAjeno</field>
+			<field name="res_model">upogarden.trabajadorajeno</field>
 			<field name="view_mode">tree,form</field>
 		</record>
 		
-		<menuitem id="upogarden" name="UPOGARDEN"
-			action="act_trabajador" />
+		
 		<menuitem name="Trabajadores" id="trabajador_submenu"
 			parent="upogarden" sequence="100" />
 		<menuitem name="Ver Jardineros" id="trabajador_submenu_2"

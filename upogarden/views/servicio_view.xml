@@ -13,7 +13,8 @@
 						<field name="precio_Hora" />
 						<field name="productos_ids" />
 						<field name="contrataciones_ids" />
-
+						<field name="jardineros_ids" />
+						<field name="trabajadores_ajenos_ids" />
 					</group>
 				</form>
 			</field>
@@ -30,6 +31,8 @@
 					<field name="precio_Hora" />
 					<field name="productos_ids" />
 					<field name="contrataciones_ids" />
+					<field name="jardineros_ids" />
+					<field name="trabajadores_ajenos_ids" />
 				</tree>
 			</field>
 		</record>
