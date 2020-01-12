@@ -15,3 +15,7 @@ class servicio(models.Model):
     contrataciones_ids = fields.Many2many('upogarden.contratacion',string="Contrataciones")
     jardineros_ids = fields.Many2many('upogarden.jardinero',string="Jardineros")
     trabajadores_ajenos_ids = fields.Many2many('upogarden.trabajadorajeno',string="Trabajadores ajenos")
+    
+    _sql_constraints = [
+        ('id_servicio', 'UNIQUE (id_servicio)',  'No se pueden crear dos servicios con el mismo id.')
+    ]

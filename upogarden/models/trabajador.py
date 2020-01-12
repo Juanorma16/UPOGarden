@@ -11,3 +11,7 @@ class trabajador(models.Model):
     nombre = fields.Char('Nombre', size=64, required=True)
     sueldo = fields.Float('Sueldo',requiered=True)
     tipo = fields.Char('Tipo', size=64, required=True)
+    
+    _sql_constraints = [
+        ('id_trabajador', 'UNIQUE (id_trabajador)',  'No se pueden crear dos trabajadores con el mismo id.')
+    ]

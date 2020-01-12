@@ -29,6 +29,7 @@
 					<field name="productos_ids"/>
 					<field name="cliente_id"/>
 					<field name="entrega_id" />
+					<field name="tiempo_Total"/>
 				</tree>
 			</field>
 		</record>

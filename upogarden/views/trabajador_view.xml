@@ -7,6 +7,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de Jardineros">
 					<group string="Jardineros">
+						<button name="baja_jardinero" string="Baja jardinero" type="object" ></button>
 						<group colspan="4">
 							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
 							<field name="nombre" />
@@ -41,6 +42,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de Trabajadores">
 					<group string="Trabajadores Ajenos">
+						<button name="baja_trabajador_ajeno" string="Baja trabajador ajeno" type="object" ></button>
 						<group colspan="4">
 							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
 							<field name="nombre" />

@@ -8,3 +8,6 @@ class jardinero(models.Model):
     _inherit = 'upogarden.trabajador'
     turno = fields.Char('Turno', size=64, required=True)
     servicios_ids = fields.Many2many('upogarden.servicio',string="Servicios")
+    
+    def baja_jardinero(self):
+        self.write({'servicios_ids':[(5, ) ]})

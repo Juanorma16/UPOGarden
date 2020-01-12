@@ -11,3 +11,7 @@ class proveedor(models.Model):
     nombre = fields.Char('Nombre', size=64, required=True)
     localizacion = fields.Char('Localizacion', size=64, required=True)
     productos_ids = fields.One2many("upogarden.producto","proveedor_id","Productos")
+    
+    _sql_constraints = [
+        ('id_proveedor', 'UNIQUE (id_proveedor)',  'No se pueden crear dos proveedores con el mismo id.')
+    ]

@@ -15,3 +15,6 @@ class producto(models.Model):
     alquiler_ids = fields.Many2many('upogarden.alquiler',string="Alquileres")
     proveedor_id = fields.Many2one("upogarden.proveedor","Proveedor")
     
+    _sql_constraints = [
+        ('id_producto', 'UNIQUE (id_producto)',  'No se pueden crear dos productos con el mismo id.')
+    ]

@@ -36,6 +36,7 @@
 					<field name="lugar" />
 					<field name="servicios_ids" />
 					<field name="cliente_id"/>
+					<field name="tiempo_Total"/>
 					<field name="state"/>
 				</tree>
 			</field>

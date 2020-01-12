@@ -11,3 +11,6 @@ class presupuesto(models.Model):
     coste_Total = fields.Float('Coste total', required=True)
     descripcion = fields.Char('Descripcion', size=64, required=True)
     
+    _sql_constraints = [
+        ('id_presupuesto', 'UNIQUE (id_presupuesto)',  'No se pueden crear dos presupuestos con el mismo id.')
+    ]

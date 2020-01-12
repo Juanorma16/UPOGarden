@@ -6,6 +6,11 @@
 			<field name="model">upogarden.cliente</field>
 			<field name="arch" type="xml">
 				<form string="Formulario de clientes">
+					<header>
+						<button name="btn_submit_to_admitido" string="Admitir"
+							type="object" class="oe_highlight" states="solicitante" />
+							<field name='state' widget='statusbar' />
+					</header>
 					<group string="Clientes">
 						<group colspan="4">
 							<field name="id_cliente" /><!--- AL CREAR SE VE ESTO -->

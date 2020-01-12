@@ -11,3 +11,7 @@ class entrega(models.Model):
     lugar_Entrega = fields.Char('Lugar', size=64, required=True)
     fecha_Entrega = fields.Datetime('Fecha',required=True, autodate = True)
     alquiler_id = fields.Many2one("upogarden.alquiler","Alquiler")
+    
+    _sql_constraints = [
+        ('id_entrega', 'UNIQUE (id_entrega)',  'No se pueden crear dos entregas con el mismo id.')
+    ]
