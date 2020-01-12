@@ -7,7 +7,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de entregas">
 					<group string="Entregas">
-						<field name="id_entrega" /><!--- AL CREAR SE VE ESTO -->
+						<field name="id_entrega" />
 						<field name="lugar_Entrega" />
 						<field name="fecha_Entrega" />
 						<field name="alquiler_id" />
@@ -21,7 +21,7 @@
 			<field name="model">upogarden.entrega</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de entregas">
-					<field name="id_entrega" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_entrega" />
 					<field name="lugar_Entrega" />
 					<field name="fecha_Entrega" />
 					<field name="alquiler_id" />

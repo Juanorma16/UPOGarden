@@ -7,7 +7,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de presupuestos">
 					<group string="Presupuestos">
-						<field name="id_presupuesto" /><!--- AL CREAR SE VE ESTO -->
+						<field name="id_presupuesto" />
 						<field name="coste_Total" />
 						<field name="descripcion" />
 					</group>
@@ -20,7 +20,7 @@
 			<field name="model">upogarden.presupuesto</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de presupuestos">
-					<field name="id_presupuesto" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_presupuesto" />
 					<field name="coste_Total" />
 					<field name="descripcion" />
 				</tree>

@@ -7,7 +7,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de alquileres">
 					<group string="Alquileres">
-						<field name="id_alquiler" /><!--- AL CREAR SE VE ESTO -->
+						<field name="id_alquiler" />O -->
 						<field name="fecha_Inicio" />
 						<field name="fecha_Fin" />
 						<field name="productos_ids" />
@@ -23,7 +23,7 @@
 			<field name="model">upogarden.alquiler</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de alquileres">
-					<field name="id_alquiler" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_alquiler" />
 					<field name="fecha_Inicio" />
 					<field name="fecha_Fin" />
 					<field name="productos_ids"/>

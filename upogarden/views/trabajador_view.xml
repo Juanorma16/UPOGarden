@@ -9,7 +9,7 @@
 					<group string="Jardineros">
 						<button name="baja_jardinero" string="Baja jardinero" type="object" ></button>
 						<group colspan="4">
-							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
+							<field name="id_trabajador" />
 							<field name="nombre" />
 							<field name="sueldo" />
 							<field name="tipo" />
@@ -25,7 +25,7 @@
 			<field name="model">upogarden.jardinero</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de Jardineros">
-					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_trabajador" />
 					<field name="nombre" />
 					<field name="sueldo" />
 					<field name="tipo" />
@@ -44,7 +44,7 @@
 					<group string="Trabajadores Ajenos">
 						<button name="baja_trabajador_ajeno" string="Baja trabajador ajeno" type="object" ></button>
 						<group colspan="4">
-							<field name="id_trabajador" /><!--- AL CREAR SE VE ESTO -->
+							<field name="id_trabajador" />
 							<field name="nombre" />
 							<field name="sueldo" />
 							<field name="tipo" />
@@ -64,7 +64,7 @@
 			<field name="model">upogarden.trabajadorajeno</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de Trabajadores Ajenos">
-					<field name="id_trabajador" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_trabajador" />
 					<field name="nombre" />
 					<field name="sueldo" />
 					<field name="tipo" />

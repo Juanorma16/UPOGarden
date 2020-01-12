@@ -8,7 +8,7 @@
 				<form string="Formulario de productos">
 					<group string="Productos">
 						<group>
-							<field name="id_producto" /><!--- AL CREAR SE VE ESTO -->
+							<field name="id_producto" />
 							<field name="nombre" />
 							<field name="descripcion" />
 							<field name="precio_Hora" />
@@ -31,7 +31,7 @@
 			<field name="model">upogarden.producto</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de productos">
-					<field name="id_producto" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_producto" />
 					<field name="nombre" />
 					<field name="descripcion" />
 					<field name="precio_Hora" />

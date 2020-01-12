@@ -14,7 +14,7 @@
 							<field name='state' widget='statusbar' />
 					</header>
 					<group string="Contrataciones">
-						<field name="id_contratacion" /><!--- AL CREAR SE VE ESTO -->
+						<field name="id_contratacion" />
 						<field name="fecha_Inicio" />
 						<field name="fecha_Fin" />
 						<field name="lugar" />
@@ -30,7 +30,7 @@
 			<field name="model">upogarden.contratacion</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de contrataciones">
-					<field name="id_contratacion" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_contratacion" />
 					<field name="fecha_Inicio" />
 					<field name="fecha_Fin" />
 					<field name="lugar" />

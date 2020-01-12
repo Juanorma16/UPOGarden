@@ -13,7 +13,7 @@
 					</header>
 					<group string="Clientes">
 						<group colspan="4">
-							<field name="id_cliente" /><!--- AL CREAR SE VE ESTO -->
+							<field name="id_cliente" />
 							<field name="nombre" />
 							<field name="apellidos" />
 						</group>
@@ -39,7 +39,7 @@
 			<field name="model">upogarden.cliente</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de clientes">
-					<field name="id_cliente" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_cliente" />
 					<field name="nombre" />
 					<field name="apellidos" />
 					<field name="alquileres_ids" />

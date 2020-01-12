@@ -7,7 +7,7 @@
 			<field name="arch" type="xml">
 				<form string="Formulario de servicios">
 					<group string="Servicios">
-						<field name="id_servicio" /><!--- AL CREAR SE VE ESTO -->
+						<field name="id_servicio" />
 						<field name="nombre" />
 						<field name="descripcion" />
 						<field name="precio_Hora" />
@@ -25,7 +25,7 @@
 			<field name="model">upogarden.servicio</field>
 			<field name="arch" type="xml">
 				<tree string="Tree de servicios">
-					<field name="id_servicio" /><!--- EN LA LISTA SE VE ESTO -->
+					<field name="id_servicio" />
 					<field name="nombre" />
 					<field name="descripcion" />
 					<field name="precio_Hora" />

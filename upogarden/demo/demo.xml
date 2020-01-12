@@ -1,30 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
-        <!--  -->
-        <!--   <record id="object0" model="upogarden.upogarden"> -->
-        <!--     <field name="name">Object 0</field> -->
-        <!--     <field name="value">0</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object1" model="upogarden.upogarden"> -->
-        <!--     <field name="name">Object 1</field> -->
-        <!--     <field name="value">10</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object2" model="upogarden.upogarden"> -->
-        <!--     <field name="name">Object 2</field> -->
-        <!--     <field name="value">20</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object3" model="upogarden.upogarden"> -->
-        <!--     <field name="name">Object 3</field> -->
-        <!--     <field name="value">30</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object4" model="upogarden.upogarden"> -->
-        <!--     <field name="name">Object 4</field> -->
-        <!--     <field name="value">40</field> -->
-        <!--   </record> -->
-        <!--  -->
-    </data>
+	<data noupdate="1">
+		<record id="cliente1" model="upogarden.cliente">
+			<field name="id_cliente">46578923G</field>
+			<field name="nombre">Juan Antonio</field>
+			<field name="apellidos">Ortiz Martín</field>
+		</record>
+		
+		<record id="jardinero1" model="upogarden.jardinero">
+			<field name="id_trabajador">01</field>
+			<field name="nombre">José Luis Cerdá Madueño</field>
+			<field name="sueldo">6</field>
+			<field name="tipo">Senior</field>
+			<field name="turno">Mañana y tarde</field> 
+		</record>
+		
+		<record id="trabajadorajeno1" model="upogarden.trabajadorajeno">
+			<field name="id_trabajador">02</field>
+			<field name="nombre">Pedro Rísquez Calvillo</field>
+			<field name="sueldo">5</field>
+			<field name="tipo">Senior</field>
+			<field name="telefono">654258741</field>
+			<field name="disponibilidad">SI</field>
+			<field name="empresa">GREENTHINGS</field>
+			<field name="experiencia">2 años</field>
+			<field name="especialidad">Setos</field>
+		</record>
+		
+		<record id="producto1" model="upogarden.producto">
+			<field name="id_producto">01</field>
+			<field name="nombre">Motosierra Poda 25cc</field>
+			<field name="descripcion">Ligera, equilibrada, funcional y cómoda motosierra de poda.</field>
+			<field name="precio_Hora">4</field>
+		</record>
+		<record id="producto2" model="upogarden.producto">
+			<field name="id_producto">02</field>
+			<field name="nombre">Cortacésped</field>
+			<field name="descripcion">1200W, 32cm de anchura de corte.</field>
+			<field name="precio_Hora">7</field>
+		</record>
+		<record id="producto3" model="upogarden.producto">
+			<field name="id_producto">03</field>
+			<field name="nombre">Tijeras de poda</field>
+			<field name="descripcion">Tijeras de corte yunque de acero.</field>
+			<field name="precio_Hora">3</field>
+		</record>
+		<record id="producto4" model="upogarden.producto">
+			<field name="id_producto">04</field>
+			<field name="nombre">Sierra de pértiga</field>
+			<field name="descripcion">Sierra de acero con dentado japonés.</field>
+			<field name="precio_Hora">3</field>
+		</record>
+		
+		<record id="proveedor1" model="upogarden.proveedor">
+			<field name="id_proveedor">01</field>
+			<field name="nombre">BRICOGREEN</field>
+			<field name="localizacion">Dos Hermanas</field>
+		</record>
+		
+		<record id="servicio1" model="upogarden.servicio">
+			<field name="id_servicio">01</field>
+			<field name="nombre">Limpieza y arreglos</field>
+			<field name="descripcion">Limpieza y arreglo del terreno a tratar para su mejora.</field>
+			<field name="precio_Hora">9</field>
+		</record>
+		<record id="servicio2" model="upogarden.servicio">
+			<field name="id_servicio">02</field>
+			<field name="nombre">Mantenimiento</field>
+			<field name="descripcion">Mantenimiento y arreglos para cuidado del terreno.</field>
+			<field name="precio_Hora">8</field>
+		</record>
+		
+		<record id="contratacion1" model="upogarden.contratacion">
+			<field name="id_contratacion">01</field>
+			<field name="fecha_Inicio">11/12/2019</field>
+			<field name="fecha_Fin">23/12/2019</field>
+			<field name="lugar">Universidad Pablo de Olavide</field>
+			<field name="state"></field>
+		</record>
+		
+		<record id="alquiler1" model="upogarden.alquiler">
+			<field name="id_alquiler">01</field>
+			<field name="fecha_Inicio">10/11/2019</field>
+			<field name="fecha_Fin">12/11/2019</field>
+		</record>
+		
+		<record id="entrega1" model="upogarden.entrega">
+			<field name="id_entrega">01</field>
+			<field name="lugar_Entrega">Dos Hermanas</field>
+			<field name="fecha_Entrega">16/10/2019</field>
+		</record>
+		
+		<record id="presupuesto1" model="upogarden.presupuesto">
+			<field name="id_presupuesto">01</field>
+			<field name="coste_Total">15</field>
+			<field name="descripcion">Servicios UPOGarden.</field>
+		</record>
+	</data>
 </odoo>
